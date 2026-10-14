@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futebol Q&A em Tempo Real</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="modal-card">
+        <h1>Futebol Q&A 3D</h1>
+        <p class="subtitulo">Pesquise qualquer notícia ou dúvida de futebol sem sair da página.</p>
+        
+        <!-- Formulário de Pergunta -->
+        <div class="caixa-busca">
+            <input type="text" id="campo-pergunta" placeholder="Ex: Quem é o líder do Brasileirão?" autocomplete="off">
+            <button id="btn-perguntar" onclick="buscarResposta()">Pesquisar na Página</button>
+        </div>
+
+        <!-- Indicador de Carregamento -->
+        <div id="loading" class="status-loading" style="display: none;">
+            ⚽ Buscando informações atualizadas...
+        </div>
+        
+        <!-- Resposta e Resultados Incorporados -->
+        <div id="caixa-resultado" class="caixa-resultado" style="display: none;">
+            <h3>Resumo da Pesquisa:</h3>
+            <p id="texto-resposta" class="texto-resposta"></p>
+
+            <!-- Janela Incorporada do DuckDuckGo -->
+            <div class="container-iframe">
+                <iframe id="iframe-busca" src="" title="Resultados de Futebol"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
